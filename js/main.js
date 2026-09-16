@@ -1,6 +1,38 @@
 (() => {
   "use strict";
 
+  /* ---------- Tema: dark por defecto, light opcional ---------- */
+  const THEME_KEY = "fluent-theme";
+  const rootEl = document.documentElement;
+
+  const applyTheme = (theme) => {
+    rootEl.setAttribute("data-theme", theme);
+    rootEl.setAttribute("data-bs-theme", theme === "light" ? "light" : "dark");
+    document.querySelectorAll(".theme-toggle i").forEach((icon) => {
+      icon.className = theme === "light" ? "bi bi-moon-stars-fill" : "bi bi-sun-fill";
+    });
+    try {
+      localStorage.setItem(THEME_KEY, theme);
+    } catch (e) { /* modo de privacidad u otros */ }
+  };
+
+  const currentTheme = (() => {
+    try {
+      return localStorage.getItem(THEME_KEY) || "dark";
+    } catch (e) {
+      return "dark";
+    }
+  })();
+
+  applyTheme(currentTheme);
+
+  document.querySelectorAll(".theme-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const next = rootEl.getAttribute("data-theme") === "light" ? "dark" : "light";
+      applyTheme(next);
+    });
+  });
+
   /* ---------- Navbar: cambio de fondo al hacer scroll ---------- */
   const nav = document.getElementById("mainNav") || document.querySelector(".main-nav");
   const onScrollNav = () => {
@@ -104,7 +136,7 @@
 
       const filter = btn.dataset.filter;
       moduleCards.forEach((card) => {
-        const match = filter === "all" || card.dataset.category === filter;
+        const match = filter === "all" || card.dataset.cat === filter;
         card.classList.toggle("hidden-filter", !match);
         if (match) {
           card.style.opacity = "0";
