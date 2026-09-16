@@ -1168,6 +1168,142 @@ section[id], div[id] { scroll-margin-top: 6rem; }
   .topics-track { animation: none; flex-wrap: wrap; width: auto; padding: 0; }
 }
 
+/* ---------- Contenedor ampliado (pantallas grandes) ---------- */
+@media (min-width: 1200px) {
+  .container { max-width: 1400px; }
+}
+
+/* ---------- Stats (social proof) ---------- */
+.stat-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+.stat-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #fff;
+  background: var(--grad-1);
+  box-shadow: 0 12px 28px -8px rgba(108, 92, 231, 0.55);
+  margin-bottom: 1rem;
+  transition: transform 0.35s ease;
+}
+.stat-card:hover .stat-icon { transform: scale(1.1) rotate(-6deg); }
+.stat-icon.si-cyan { background: linear-gradient(135deg, #00d2ff, #3ddcff); box-shadow: 0 12px 28px -8px rgba(0, 210, 255, 0.55); }
+.stat-icon.si-amber { background: linear-gradient(135deg, #ffc048, #ff7675); box-shadow: 0 12px 28px -8px rgba(255, 192, 72, 0.55); }
+.stat-icon.si-mint { background: linear-gradient(135deg, #55efc4, #00d2ff); box-shadow: 0 12px 28px -8px rgba(85, 239, 196, 0.55); }
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--heading-color);
+  line-height: 1.1;
+}
+.stat-label {
+  color: var(--soft-text);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.3rem;
+}
+
+/* ---------- Steps (como funciona) ---------- */
+.step-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+.step-num {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #fff;
+  background: var(--grad-1);
+  box-shadow: 0 10px 24px -6px rgba(108, 92, 231, 0.55);
+  margin-bottom: 1.1rem;
+}
+.step-card h5 { color: var(--heading-color); }
+.step-card p { color: var(--body-text); }
+.step-connector {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .step-connector {
+    display: block;
+    position: absolute;
+    top: 2.6rem;
+    right: -1rem;
+    width: 2rem;
+    height: 2px;
+    background: var(--grad-1);
+    opacity: 0.4;
+  }
+  .step-card:last-child .step-connector { display: none; }
+}
+
+/* ---------- Modules preview (grid en home) ---------- */
+.module-preview-card {
+  background: var(--card-bg2);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--card-shadow);
+  padding: 1.8rem;
+  text-decoration: none;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.module-preview-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -16px rgba(108, 92, 231, 0.35);
+}
+.module-preview-card .mp-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  background: var(--grad-1);
+  flex-shrink: 0;
+  transition: transform 0.35s ease;
+}
+.module-preview-card:hover .mp-icon { transform: scale(1.1) rotate(-6deg); }
+.module-preview-card .mp-icon.mp-cyan { background: linear-gradient(135deg, #00d2ff, #3ddcff); }
+.module-preview-card .mp-icon.mp-amber { background: linear-gradient(135deg, #ffc048, #ff7675); }
+.module-preview-card .mp-icon.mp-mint { background: linear-gradient(135deg, #55efc4, #00d2ff); }
+.module-preview-card h5 {
+  color: var(--heading-color);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.module-preview-card p {
+  color: var(--soft-text);
+  font-size: 0.88rem;
+  margin: 0;
+}
+.module-preview-card .mp-arrow {
+  margin-left: auto;
+  color: var(--primary-2);
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.module-preview-card:hover .mp-arrow { transform: translateX(4px); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 991.98px) {
   .demo-slide { padding: 2rem; }
