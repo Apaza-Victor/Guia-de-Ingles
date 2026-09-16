@@ -30,7 +30,7 @@
 .page-hero .badge-chip { margin-bottom: 1.2rem; }
 
 /* ---------- Cuerpo de contenido ---------- */
-.course-container { max-width: 860px; margin-inline: auto; }
+.course-container { width: 100%; max-width: 1120px; margin-inline: auto; }
 .subsection-block { scroll-margin-top: 6rem; }
 .subsection-block .lead { color: var(--body-text); }
 
