@@ -54,19 +54,34 @@
 
   <main>
     <!-- ===== HERO (pantalla completa) ===== -->
-    <section class="hero d-flex align-items-center position-relative" id="inicio">
+    <section class="hero d-flex align-items-center position-relative overflow-hidden" id="inicio">
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <div class="blob blob-3"></div>
       <div class="mesh-bg" aria-hidden="true"></div>
+      <div class="hero-dots" aria-hidden="true"></div>
+      <div class="aurora-ring" aria-hidden="true"></div>
+
       <div class="container position-relative hero-content">
         <div class="row align-items-center gy-5 pt-lg-2">
           <div class="col-12 col-lg-7 text-center text-lg-start">
-            <span class="badge-chip mb-3 reveal-up"><i class="bi bi-stars me-2"></i>Método #1 para dominar el inglés</span>
+            <span class="badge-chip mb-3 reveal-up">
+              <span class="badge-dot me-2" aria-hidden="true"></span>
+              Método #1 para dominar el inglés
+            </span>
             <h1 class="display-4 fw-bold text-white hero-title reveal-up delay-1">
               De <span class="gradient-text">cero</span> a
-              <span class="gradient-text">experto</span>.<br>
-              Domina el inglés por completo.
+              <span class="gradient-text">experto</span>.
+              <span class="d-inline-block mt-2">Habla inglés
+                <span class="word-roller" aria-hidden="true">
+                  <span class="word-roll">
+                    <span>con confianza</span>
+                    <span>con fluidez</span>
+                    <span>como un nativo</span>
+                    <span>en cualquier momento</span>
+                  </span>
+                </span>
+              </span>
             </h1>
             <p class="lead text-white-50 hero-sub reveal-up delay-2">
               Un sistema paso a paso que combina gramática, vocabulario, pronunciación y
@@ -74,62 +89,101 @@
             </p>
             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start reveal-up delay-3">
               <a href="modulos/index.html" class="btn btn-grad btn-lg px-4 py-3 rounded-pill fw-semibold">
-                <i class="bi bi-rocket-takeoff me-2"></i>Comenzar ahora
+                <i class="bi bi-rocket-takeoff me-2"></i>Comenzar gratis
               </a>
               <a href="ruta.html" class="btn btn-glass btn-lg px-4 py-3 rounded-pill fw-semibold">
-                <i class="bi bi-play-circle me-2"></i>Ver la ruta
+                <i class="bi bi-signpost-2 me-2"></i>Ver la ruta
               </a>
             </div>
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-4 mt-4 pt-2 reveal-up delay-4">
-              <div class="d-flex align-items-center">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-3 mt-4 pt-2 reveal-up delay-4">
+              <div class="trust-chip d-flex align-items-center">
                 <div class="avatar-stack">
                   <i class="bi bi-person-fill"></i>
                   <i class="bi bi-person-fill"></i>
                   <i class="bi bi-person-fill"></i>
                 </div>
-                <div class="ms-2 text-white small">
+                <div class="ms-2 text-white small lh-sm">
                   <strong>+12,500</strong><br><span class="text-white-50">estudiantes</span>
                 </div>
               </div>
-              <div class="rating-star text-white">
+              <div class="trust-chip d-flex align-items-center gap-2 rating-star text-white">
                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                <span class="ms-1 text-white-50 small">4.9/5 promedio</span>
+                <span class="small text-white-50">4.9/5</span>
+              </div>
+              <div class="trust-chip d-flex align-items-center text-white small gap-2">
+                <i class="bi bi-patch-check-fill text-info"></i>
+                <span>Certificado de nivel C1</span>
               </div>
             </div>
           </div>
+
           <div class="col-12 col-lg-5 text-center reveal-scale delay-3">
-            <div class="hero-card glass-card p-4 text-start mx-auto">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <span class="fw-semibold text-white"><i class="bi bi-bar-chart-fill me-2 text-info"></i>Tu progreso</span>
-                <span class="badge bg-success-subtle text-success rounded-pill px-3">Nivel 4</span>
+            <div class="hero-card glass-card p-0 text-start mx-auto overflow-hidden">
+              <div class="app-head d-flex align-items-center gap-2 px-4 py-3 border-bottom border-white border-opacity-10">
+                <span class="win-dot" style="background:#ff5f57"></span>
+                <span class="win-dot" style="background:#febc2e"></span>
+                <span class="win-dot" style="background:#28c840"></span>
+                <span class="app-title ms-2 small fw-semibold text-white-50"><i class="bi bi-translate me-1"></i>FluentPath · App</span>
+                <span class="ms-auto text-white-50 small"><i class="bi bi-battery-charging"></i></span>
               </div>
-              <div class="level-row d-flex align-items-center gap-2 mb-3">
-                <div class="level-dots"><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span></span><span></span><span></span><span></span></div>
-                <small class="text-white-50">Intermedio</small>
-              </div>
-              <div class="spark-bar">
-                <div class="spark-seg"></div>
-                <div class="spark-seg"></div>
-                <div class="spark-seg"></div>
-                <div class="spark-seg mid"></div>
-                <div class="spark-seg"></div>
-                <div class="spark-seg"></div>
-                <div class="spark-seg"></div>
-                <div class="spark-seg"></div>
-              </div>
-              <div class="d-flex justify-content-between align-items-center mt-3">
-                <div>
-                  <h6 class="text-white mb-0 fw-semibold">Speaking session</h6>
-                  <small class="text-white-50">Conversación en vivo</small>
+              <div class="p-4">
+                <div class="d-flex align-items-center gap-4">
+                  <div class="ring-wrap position-relative">
+                    <svg class="progress-ring" viewBox="0 0 72 72" width="76" height="76" aria-hidden="true">
+                      <defs>
+                        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#a29bfe" />
+                          <stop offset="100%" stop-color="#00d2ff" />
+                        </linearGradient>
+                      </defs>
+                      <circle class="ring-bg" cx="36" cy="36" r="30"></circle>
+                      <circle class="ring-fg" cx="36" cy="36" r="30"></circle>
+                    </svg>
+                    <span class="ring-label">72%</span>
+                  </div>
+                  <div class="d-none d-sm-block">
+                    <h6 class="text-white mb-1 fw-semibold">Tu progreso total</h6>
+                    <small class="text-white-50">Intermedio → Avanzado</small>
+                    <div class="d-flex align-items-center gap-2 mt-2 flex-wrap">
+                      <span class="level-pill">Nivel 4</span>
+                      <span class="xp-pill">+320 XP</span>
+                    </div>
+                  </div>
                 </div>
-                <span class="icon-round pulse-bg"><i class="bi bi-mic-fill"></i></span>
-              </div>
-              <div class="custom-progress mt-3">
-                <div class="display-6-heading">Racha diaria</div>
-                <div class="progress bg-white bg-opacity-10 rounded-pill" role="progressbar" aria-label="Racha">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated streak-bar" style="width: 72%"></div>
+
+                <div class="flash-card mt-3">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="flash-label"><i class="bi bi-book me-1"></i>Palabra del día</span>
+                    <button class="speak-btn" type="button" aria-label="Escuchar pronunciación" data-speak="Eloquent">
+                      <i class="bi bi-volume-up-fill"></i>
+                    </button>
+                  </div>
+                  <div class="flash-en">Eloquent</div>
+                  <div class="flash-es">elocuente · que habla con fluidez</div>
                 </div>
-                <small class="text-white-50">21 días seguidos <i class="bi bi-fire text-warning ms-1"></i></small>
+
+                <div class="d-flex justify-content-between align-items-center mt-3">
+                  <h6 class="text-white mb-0 fw-semibold small">Actividad semanal</h6>
+                  <span class="text-white-50 small">7 días <i class="bi bi-fire text-warning ms-1"></i></span>
+                </div>
+                <div class="spark-bar mt-2" aria-hidden="true">
+                  <div class="spark-seg"></div>
+                  <div class="spark-seg"></div>
+                  <div class="spark-seg"></div>
+                  <div class="spark-seg"></div>
+                  <div class="spark-seg"></div>
+                  <div class="spark-seg"></div>
+                  <div class="spark-seg"></div>
+                  <div class="spark-seg"></div>
+                </div>
+
+                <div class="custom-progress mt-3">
+                  <div class="display-6-heading">Racha diaria</div>
+                  <div class="progress bg-white bg-opacity-10 rounded-pill" role="progressbar" aria-label="Racha">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated streak-bar" style="width: 72%"></div>
+                  </div>
+                  <small class="text-white-50">21 días seguidos <i class="bi bi-arrow-up-right text-success ms-1"></i></small>
+                </div>
               </div>
             </div>
             <div class="floating-chip chip-top">
@@ -138,8 +192,17 @@
             <div class="floating-chip chip-bottom">
               <i class="bi bi-lightning-charge-fill text-warning"></i> +120 lecciones
             </div>
+            <div class="hero-notif" role="status">
+              <span class="notif-ico"><i class="bi bi-stars"></i></span>
+              <span>¡Aprendiste 20 palabras hoy!</span>
+            </div>
           </div>
         </div>
+
+        <a href="#frase-inicio" class="scroll-indicator d-none d-md-flex" aria-label="Bajar al contenido">
+          <span class="mouse"><span class="wheel"></span></span>
+          Explora
+        </a>
       </div>
       <div class="hero-wave">
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
@@ -147,6 +210,48 @@
         </svg>
       </div>
     </section>
+
+    <!-- ===== FRANJA DE TEMAS ===== -->
+    <section class="topics-strip" aria-label="Temas de la guía">
+      <div class="topics-mask">
+        <div class="topics-track">
+          <span class="topic-item"><i class="bi bi-diagram-2"></i>Gramática</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-book"></i>Vocabulario</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-chat-dots"></i>Conversación</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-mic"></i>Pronunciación</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-puzzle"></i>Phrasal verbs</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-fire"></i>Slang real</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-briefcase"></i>Entrevistas</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-soundwave"></i>Fonética</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+
+          <span class="topic-item"><i class="bi bi-diagram-2"></i>Gramática</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-book"></i>Vocabulario</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-chat-dots"></i>Conversación</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-mic"></i>Pronunciación</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-puzzle"></i>Phrasal verbs</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-fire"></i>Slang real</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-briefcase"></i>Entrevistas</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+          <span class="topic-item"><i class="bi bi-soundwave"></i>Fonética</span>
+          <i class="bi bi-star-fill topic-sep"></i>
+        </div>
+      </div>
+    </section>
+    <span id="frase-inicio" class="visually-hidden"></span>
 
     <!-- ===== CTA BANNER ===== -->
     <section class="cta-section py-5">

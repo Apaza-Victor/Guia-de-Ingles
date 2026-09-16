@@ -193,6 +193,19 @@
     });
   }
 
+  /* ---------- Pronunciación: palabra del día (SpeechSynthesis) ---------- */
+  document.querySelectorAll(".speak-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const word = btn.dataset.speak || btn.textContent.trim();
+      if (!("speechSynthesis" in window)) return;
+      speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(word);
+      utter.lang = "en-US";
+      utter.rate = 0.9;
+      speechSynthesis.speak(utter);
+    });
+  });
+
   /* ---------- Mini quiz (lecciones) ---------- */
   document.querySelectorAll(".quiz-card").forEach((card) => {
     const options = card.querySelectorAll(".quiz-option");
