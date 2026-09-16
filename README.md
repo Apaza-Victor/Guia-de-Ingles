@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/%F0%9F%9A%80_FluentPath-0b1020?style=for-the-badge&logo=simpleicons" alt="FluentPath" width="260">
+  <img src="https://img.shields.io/badge/%F0%9F%9A%80_FluentPath-0b1020?style=for-the-badge" alt="FluentPath" width="260">
   <h1 align="center">De Cero a Experto en Inglés</h1>
   <p align="center">Guía web moderna, responsive e interactiva para dominar el inglés paso a paso. Construida con HTML5, Bootstrap 5, CSS3 personalizado y JavaScript vanilla.</p>
 </p>
@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/website?url=https%3A%2F%2Fapaza-victor.github.io%2FGuia-de-Ingles%2F&style=for-the-badge&label=%F0%9F%8C%90%20Web%20desplegada&logo=github&logoColor=white" alt="Estado de la web">
   </a>
   <a href="https://apaza-victor.github.io/Guia-de-Ingles/" target="_blank">
-    <img src="https://img.shields.io/badge/%F0%9F%9A%80%20Ver%20la%20web%20en%20vivo-6C5CE7?style=for-the-badge&logo=world&logoColor=white" alt="Ver la web en vivo">
+    <img src="https://img.shields.io/badge/%F0%9F%9A%80%20Ver%20la%20web%20en%20vivo-6C5CE7?style=for-the-badge" alt="Ver la web en vivo">
   </a>
 </p>
 
