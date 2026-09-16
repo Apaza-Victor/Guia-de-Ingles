@@ -477,8 +477,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
   position: absolute;
   width: 560px;
   height: 560px;
-  right: -160px;
-  top: 8%;
+  left: 56%;
+  top: 6%;
   z-index: 0;
   border-radius: 50%;
   background: conic-gradient(from 0deg, transparent 0%, rgba(108, 92, 231, 0.45) 20%, rgba(0, 210, 255, 0.35) 45%, transparent 70%);
@@ -1168,7 +1168,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); }
 @media (max-width: 991.98px) {
   .demo-slide { padding: 2rem; }
   .hero-card { max-width: 420px; }
-  .aurora-ring { right: -360px; top: 14%; }
+  .aurora-ring { left: 54%; top: 14%; }
   .hero-notif { display: none; }
   .scroll-indicator { bottom: 5.2rem; }
   .chip-top { top: auto; bottom: 32%; right: 0; }
