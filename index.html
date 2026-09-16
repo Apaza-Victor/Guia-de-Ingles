@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Domina el inglés desde cero hasta nivel experto. Método completo, lecciones interactivas, rutas de aprendizaje y certificación.">
+  <meta name="theme-color" content="#0b1020">
+  <title>FluentPath — De Cero a Experto en Inglés</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top main-nav py-3" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 no-underline" href="#inicio">
+          <span class="brand-icon"><i class="bi bi-translate"></i></span>
+          <span class="brand-text">Fluent<span class="brand-accent">Path</span></span>
+        </a>
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+          <i class="bi bi-list fs-1 text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 text-center">
+            <li class="nav-item"><a class="nav-link nav-link-anim" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-anim" href="#ruta">Ruta de Aprendizaje</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-anim" href="#caracteristicas">Método</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-anim" href="#modulos">Módulos</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-anim" href="#testimonios">Resultados</a></li>
+            <li class="nav-item mt-2 mt-lg-0 ms-lg-3">
+              <a href="modulos/index.html" class="btn btn-grad btn-sm px-4 py-2 rounded-pill">Explorar módulos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero d-flex align-items-center position-relative" id="inicio">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="mesh-bg" aria-hidden="true"></div>
+      <div class="container position-relative hero-content">
+        <div class="row align-items-center gy-5 pt-lg-0">
+          <div class="col-12 col-lg-7 text-center text-lg-start">
+            <span class="badge-chip mb-3 reveal-up"><i class="bi bi-stars me-2"></i>Método #1 para dominar el inglés</span>
+            <h1 class="display-4 fw-bold text-white hero-title reveal-up delay-1">
+              De <span class="gradient-text">cero</span> a
+              <span class="gradient-text">experto</span>.<br>
+              Domina el inglés por completo.
+            </h1>
+            <p class="lead text-white-50 hero-sub reveal-up delay-2">
+              Un sistema paso a paso que combina gramática, vocabulario, pronunciación y
+              conversación real para que hables inglés con confianza en cualquier situación.
+            </p>
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start reveal-up delay-3">
+              <a href="modulos/index.html" class="btn btn-grad btn-lg px-4 py-3 rounded-pill fw-semibold">
+                <i class="bi bi-rocket-takeoff me-2"></i>Comenzar ahora
+              </a>
+              <a href="#ruta" class="btn btn-glass btn-lg px-4 py-3 rounded-pill fw-semibold">
+                <i class="bi bi-play-circle me-2"></i>Ver la ruta
+              </a>
+            </div>
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start gap-4 mt-4 pt-2 reveal-up delay-4">
+              <div class="d-flex align-items-center">
+                <div class="avatar-stack">
+                  <i class="bi bi-person-fill"></i>
+                  <i class="bi bi-person-fill"></i>
+                  <i class="bi bi-person-fill"></i>
+                </div>
+                <div class="ms-2 text-white small">
+                  <strong>+12,500</strong><br><span class="text-white-50">estudiantes</span>
+                </div>
+              </div>
+              <div class="rating-star text-white">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                <span class="ms-1 text-white-50 small">4.9/5 promedio</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 text-center reveal-scale delay-3">
+            <div class="hero-card glass-card p-4 text-start mx-auto">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <span class="fw-semibold text-white"><i class="bi bi-bar-chart-fill me-2 text-info"></i>Tu progreso</span>
+                <span class="badge bg-success-subtle text-success rounded-pill px-3">Nivel 4</span>
+              </div>
+              <div class="level-row d-flex align-items-center gap-2 mb-3">
+                <div class="level-dots"><span class="done"></span><span class="done"></span><span class="done"></span><span class="done"></span><span></span><span></span><span></span><span></span></div>
+                <small class="text-white-50">Intermedio</small>
+              </div>
+              <div class="spark-bar">
+                <div class="spark-seg"></div>
+                <div class="spark-seg"></div>
+                <div class="spark-seg"></div>
+                <div class="spark-seg mid"></div>
+                <div class="spark-seg"></div>
+                <div class="spark-seg"></div>
+                <div class="spark-seg"></div>
+                <div class="spark-seg"></div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <div >
+                  <h6 class="text-white mb-0 fw-semibold">Speaking session</h6>
+                  <small class="text-white-50">Conversación en vivo</small>
+                </div>
+                <span class="icon-round pulse-bg"><i class="bi bi-mic-fill"></i></span>
+              </div>
+              <div class="custom-progress mt-3">
+                <div class="display-6-heading">Racha diaria</div>
+                <div class="progress bg-white bg-opacity-10 rounded-pill" role="progressbar" aria-label="Racha">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated streak-bar" style="width: 72%"></div>
+                </div>
+                <small class="text-white-50">21 días seguidos <i class="bi bi-fire text-warning ms-1"></i></small>
+              </div>
+            </div>
+            <div class="floating-chip chip-top">
+              <i class="bi bi-patch-check-fill text-success"></i> Certificado C1
+            </div>
+            <div class="floating-chip chip-bottom">
+              <i class="bi bi-lightning-charge-fill text-warning"></i> +120 lecciones
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0,64 C360,120 720,0 1080,48 C1260,72 1350,96 1440,88 L1440,120 L0,120 Z" fill="#ffffff"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== CONTADORES ===== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="row gy-4 stats-card glass-card p-4 p-lg-5">
+          <div class="col-6 col-lg-3 text-center">
+            <div class="stat-num gradient-text" data-count="12500" data-suffix="+">0</div>
+            <div class="stat-label">Estudiantes activos</div>
+          </div>
+          <div class="col-6 col-lg-3 text-center">
+            <div class="stat-num gradient-text" data-count="120" data-suffix="+">0</div>
+            <div class="stat-label">Lecciones interactivas</div>
+          </div>
+          <div class="col-6 col-lg-3 text-center">
+            <div class="stat-num gradient-text" data-count="30">0</div>
+            <div class="stat-label">Niveles progresivos</div>
+          </div>
+          <div class="col-6 col-lg-3 text-center">
+            <div class="stat-num gradient-text" data-count="98" data-suffix="%">0</div>
+            <div class="stat-label">Satisfacción</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RUTA DE APRENDIZAJE ===== -->
+    <section class="route-section py-5" id="ruta">
+      <div class="container py-5">
+        <div class="text-center mb-5 reveal-up">
+          <span class="badge-chip">Tu camino al éxito</span>
+          <h2 class="section-title">Ruta de aprendizaje <span class="gradient-text">completa</span></h2>
+          <p class="section-sub mx-auto">Avanza nivel por nivel desde una base absoluta hasta la fluidez profesional con C2.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-6 col-xl-3 reveal-left">
+            <div class="route-card glass-card text-center p-4 h-100 route-1">
+              <div class="route-icon"><i class="bi bi-alphabet"></i></div>
+              <span class="level-badge mb-3 d-inline-block">Nivel 0–5</span>
+              <h4 class="text-white fw-bold mb-2">Principiante</h4>
+              <p class="text-white-50 mb-0">Alfabeto, sonidos, saludos, presentarte y entender frases cotidianas básicas.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 reveal-up">
+            <div class="route-card glass-card text-center p-4 h-100 route-2">
+              <div class="route-icon"><i class="bi bi-chat-dots"></i></div>
+              <span class="level-badge mb-3 d-inline-block">Nivel 6–10</span>
+              <h4 class="text-white fw-bold mb-2">Intermedio</h4>
+              <p class="text-white-50 mb-0">Conversación fluida, tiempos verbales, vocabulario amplio para viajes y trabajo.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 reveal-up delay-1">
+            <div class="route-card glass-card text-center p-4 h-100 route-3">
+              <div class="route-icon"><i class="bi bi-briefcase"></i></div>
+              <span class="level-badge mb-3 d-inline-block">Nivel 11–20</span>
+              <h4 class="text-white fw-bold mb-2">Avanzado</h4>
+              <p class="text-white-50 mb-0">Inglés profesional, negociaciones, writing académico y expresión natural nativa.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-xl-3 reveal-right delay-2">
+            <div class="route-card glass-card text-center p-4 h-100 route-4">
+              <div class="route-icon"><i class="bi bi-mortarboard"></i></div>
+              <span class="level-badge mb-3 d-inline-block">Nivel 21–30</span>
+              <h4 class="text-white fw-bold mb-2">Experto</h4>
+              <p class="text-white-50 mb-0">Dominio total, matices culturales, ironía, fluidez C2 y error-proof communication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CARACTERÍSTICAS / MÉTODO ===== -->
+    <section class="features-section py-5" id="caracteristicas">
+      <div class="container py-5">
+        <div class="text-center mb-5 reveal-up">
+          <span class="badge-chip">Nuestro método</span>
+          <h2 class="section-title">Aprende de la <span class="gradient-text">forma correcta</span></h2>
+          <p class="section-sub mx-auto">Cuatro pilares científicos que aceleran tu dominio real del idioma.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3 reveal-up">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon mb-3"><i class="bi bi-translate"></i></div>
+              <h5 class="fw-bold mb-2 text-white">Vocabulario vivo</h5>
+              <p class="text-white-50 mb-0">Palabras en contexto real con ejemplos, imágenes y repetición espaciada.</p>
+              <span class="feature-tag">+4,000 palabras</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 reveal-up delay-1">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon mb-3"><i class="bi bi-diagram-3"></i></div>
+              <h5 class="fw-bold mb-2 text-white">Gramática clara</h5>
+              <p class="text-white-50 mb-0">Tiempos verbales y estructuras explicadas sin tecnicismos, con práctica infinita.</p>
+              <span class="feature-tag">50+ temas</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 reveal-up delay-2">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon mb-3"><i class="bi bi-mic"></i></div>
+              <h5 class="fw-bold mb-2 text-white">Pronunciación real</h5>
+              <p class="text-white-50 mb-0">Corrección de acento con listening training y fonética de inglés americano.</p>
+              <span class="feature-tag">+300 audios</span>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 reveal-up delay-3">
+            <div class="feature-card p-4 h-100">
+              <div class="feature-icon mb-3"><i class="bi bi-people"></i></div>
+              <h5 class="fw-bold mb-2 text-white">Conversación guiada</h5>
+              <p class="text-white-50 mb-0">Sesiones en vivo y simulaciones de roles para hablar desde el primer día.</p>
+              <span class="feature-tag">1/semana</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEMO / MÓDULOS (carrusel + filtros) ===== -->
+    <section class="modules-section py-5" id="modulos">
+      <div class="container py-5">
+        <div class="text-center mb-4 reveal-up">
+          <span class="badge-chip">Explora el contenido</span>
+          <h2 class="section-title">Módulos <span class="gradient-text">interactivos</span></h2>
+          <p class="section-sub mx-auto">Navega por el carrusel y filtra por área de aprendizaje.</p>
+        </div>
+
+        <div class="text-center mb-4 reveal-up">
+          <div class="filter-group" id="moduleFilters">
+            <button class="filter-btn active" data-filter="all"><i class="bi bi-grid me-1"></i>Todos</button>
+            <button class="filter-btn" data-filter="gramatica"><i class="bi bi-diagram-2 me-1"></i>Gramática</button>
+            <button class="filter-btn" data-filter="vocabulario"><i class="bi bi-book me-1"></i>Vocabulario</button>
+            <button class="filter-btn" data-filter="conversacion"><i class="bi bi-chat me-1"></i>Conversación</button>
+          </div>
+        </div>
+
+        <div class="row g-4" id="moduleGrid">
+          <!-- filtrable: gramatica -->
+          <div class="col-12 col-md-6 col-lg-4 module-item" data-category="gramatica">
+            <div class="module-card p-4 h-100">
+              <div class="module-top d-flex justify-content-between mb-3">
+                <span class="module-tag">Gramática</span>
+                <i class="bi bi-diagram-2 module-ico"></i>
+              </div>
+              <h5 class="fw-bold text-white mb-2">Tiempos verbales esenciales</h5>
+              <p class="text-white-50 mb-3">Presente, pasado y futuro explicados con ejemplos del día a día.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted small"><i class="bi bi-play-circle me-1"></i>12 lecciones</span>
+                <a href="modulos/tiempos-verbales/index.html" class="btn btn-outline-grad btn-sm rounded-pill px-3">Ver módulo</a>
+              </div>
+            </div>
+          </div>
+          <!-- filtrable: vocabulario -->
+          <div class="col-12 col-md-6 col-lg-4 module-item" data-category="vocabulario">
+            <div class="module-card p-4 h-100">
+              <div class="module-top d-flex justify-content-between mb-3">
+                <span class="module-tag active-tag">Vocabulario</span>
+                <i class="bi bi-book module-ico"></i>
+              </div>
+              <h5 class="fw-bold text-white mb-2">1,000 palabras más usadas</h5>
+              <p class="text-white-50 mb-3">El vocabulario que cubre el 85% de las conversaciones cotidianas.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted small"><i class="bi bi-play-circle me-1"></i>20 lecciones</span>
+                <a href="modulos/vocabulario-esencial/index.html" class="btn btn-outline-grad btn-sm rounded-pill px-3">Ver módulo</a>
+              </div>
+            </div>
+          </div>
+          <!-- filtrable: conversacion -->
+          <div class="col-12 col-md-6 col-lg-4 module-item" data-category="conversacion">
+            <div class="module-card p-4 h-100">
+              <div class="module-top d-flex justify-content-between mb-3">
+                <span class="module-tag">Conversación</span>
+                <i class="bi bi-chat module-ico"></i>
+              </div>
+              <h5 class="fw-bold text-white mb-2">Entrevistas de trabajo</h5>
+              <p class="text-white-50 mb-3">Simula entrevistas en inglés y responde con confianza profesional.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted small"><i class="bi bi-play-circle me-1"></i>8 lecciones</span>
+                <a href="modulos/conversacion/index.html" class="btn btn-outline-grad btn-sm rounded-pill px-3">Ver módulo</a>
+              </div>
+            </div>
+          </div>
+          <!-- filtrable: gramatica -->
+          <div class="col-12 col-md-6 col-lg-4 module-item" data-category="gramatica">
+            <div class="module-card p-4 h-100">
+              <div class="module-top d-flex justify-content-between mb-3">
+                <span class="module-tag">Gramática</span>
+                <i class="bi bi-diagram-2 module-ico"></i>
+              </div>
+              <h5 class="fw-bold text-white mb-2">Condicionales y contrastes</h5>
+              <p class="text-white-50 mb-3">Dominio de los 4 condicionales y conectores para ideas complejas.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted small"><i class="bi bi-play-circle me-1"></i>10 lecciones</span>
+                <a href="modulos/tiempos-verbales/condicionales.html" class="btn btn-outline-grad btn-sm rounded-pill px-3">Ver módulo</a>
+              </div>
+            </div>
+          </div>
+          <!-- filtrable: vocabulario -->
+          <div class="col-12 col-md-6 col-lg-4 module-item" data-category="vocabulario">
+            <div class="module-card p-4 h-100">
+              <div class="module-top d-flex justify-content-between mb-3">
+                <span class="module-tag active-tag">Vocabulario</span>
+                <i class="bi bi-book module-ico"></i>
+              </div>
+              <h5 class="fw-bold text-white mb-2">Phrasal verbs pro</h5>
+              <p class="text-white-50 mb-3">Los verbos compuestos que los nativos usan todos los días.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted small"><i class="bi bi-play-circle me-1"></i>15 lecciones</span>
+                <a href="modulos/vocabulario-esencial/phrasal-verbs.html" class="btn btn-outline-grad btn-sm rounded-pill px-3">Ver módulo</a>
+              </div>
+            </div>
+          </div>
+          <!-- filtrable: conversacion -->
+          <div class="col-12 col-md-6 col-lg-4 module-item" data-category="conversacion">
+            <div class="module-card p-4 h-100">
+              <div class="module-top d-flex justify-content-between mb-3">
+                <span class="module-tag">Conversación</span>
+                <i class="bi bi-chat module-ico"></i>
+              </div>
+              <h5 class="fw-bold text-white mb-2">Slang y expresiones nativas</h5>
+              <p class="text-white-50 mb-3">Frases reales para sonar natural y entender el inglés callejero.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted small"><i class="bi bi-play-circle me-1"></i>9 lecciones</span>
+                <a href="modulos/conversacion/slang.html" class="btn btn-outline-grad btn-sm rounded-pill px-3">Ver módulo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carrusel de demostración -->
+        <div class="mt-5 reveal-up">
+          <div id="demoCarousel" class="carousel slide carousel-fade demo-carousel rounded-4 overflow-hidden mx-auto" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="demo-slide d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+                  <div class="demo-text">
+                    <span class="badge-chip mb-3"><i class="bi bi-journal-text me-2"></i>Lección en vivo</span>
+                    <h3 class="text-white fw-bold">Gramática sin dolor</h3>
+                    <p class="text-white-50">Aprende el present perfect con una historia real, no con reglas aburridas.</p>
+                  </div>
+                  <div class="demo-visual"><span class="fs-1">🧠</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="demo-slide d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+                  <div class="demo-text">
+                    <span class="badge-chip mb-3"><i class="bi bi-ear me-2"></i>Listening training</span>
+                    <h3 class="text-white fw-bold">Entiende a los nativos</h3>
+                    <p class="text-white-50">Audios reales con velocidad ajustable, subtítulos y quizzes.</p>
+                  </div>
+                  <div class="demo-visual"><span class="fs-1">🎧</span></div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="demo-slide d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4">
+                  <div class="demo-text">
+                    <span class="badge-chip mb-3"><i class="bi bi-trophy me-2"></i>Certificación C2</span>
+                    <h3 class="text-white fw-bold">Demuestra tu nivel</h3>
+                    <p class="text-white-50">Exámenes de práctica con la misma estructura que el IELTS y TOEFL.</p>
+                  </div>
+                  <div class="demo-visual"><span class="fs-1">🏆</span></div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#demoCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demoCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="cta-section py-5">
+      <div class="container py-4">
+        <div class="cta-banner glass-card rounded-4 p-5 text-center reveal-scale">
+          <h2 class="text-white fw-bold display-6 mb-3">¿Listo para hablar inglés <span class="gradient-text">con fluidez</span>?</h2>
+          <p class="text-white-50 mx-auto mb-4" style="max-width: 560px;">Comienza desde tu nivel actual, avanza lección a lección y domina el inglés de cero a experto.</p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+            <a href="modulos/index.html" class="btn btn-grad btn-lg rounded-pill px-5 py-3 fw-semibold"><i class="bi bi-stars me-2"></i>Ir a los módulos</a>
+            <a href="#modulos" class="btn btn-glass btn-lg rounded-pill px-5 py-3 fw-semibold"><i class="bi bi-eye me-2"></i>Explorar contenido</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-12 col-lg-4">
+          <a class="navbar-brand d-flex align-items-center gap-2 no-underline mb-3" href="#inicio">
+            <span class="brand-icon"><i class="bi bi-translate"></i></span>
+            <span class="brand-text">Fluent<span class="brand-accent">Path</span></span>
+          </a>
+          <p class="text-white-50 small">La guía completa para dominar el inglés de cero a experto, con un método moderno, interactivo y comprobado.</p>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">Aprender</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#ruta">Ruta de niveles</a></li>
+            <li><a href="modulos/index.html">Módulos</a></li>
+            <li><a href="#caracteristicas">Método</a></li>
+            <li><a href="modulos/pronunciacion/index.html">Pronunciación</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h6 class="text-white fw-bold mb-3">Recursos</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Guías gratis</a></li>
+            <li><a href="#">Podcast</a></li>
+            <li><a href="#">Certificados</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h6 class="text-white fw-bold mb-3">Newsletter</h6>
+          <p class="text-white-50 small">Recibe una lección gratis cada semana en tu correo.</p>
+          <form class="newsletter-form d-flex gap-2" id="newsletterForm">
+            <input type="email" class="form-control form-control-modern" placeholder="tu@correo.com" required>
+            <button class="btn btn-grad rounded-pill px-3 flex-shrink-0" type="submit" aria-label="Suscribirme"><i class="bi bi-send-fill"></i></button>
+          </form>
+        </div>
+      </div>
+      <hr class="border-secondary border-opacity-25">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 pt-2">
+        <div class="text-white-50 small">© 2026 FluentPath. Todos los derechos reservados.</div>
+        <div class="d-flex gap-3 small">
+          <a href="#" class="text-white-50 text-decoration-none hover-white">Privacidad</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-white">Términos</a>
+          <a href="#" class="text-white-50 text-decoration-none hover-white">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top btn rounded-circle d-none align-items-center justify-content-center" id="backToTop" aria-label="Volver arriba">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
