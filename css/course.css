@@ -37,5 +37,5 @@
 /* ---------- Responsive ---------- */
 @media (max-width: 575.98px) {
   .page-hero { padding: 7rem 0 3rem; }
-  .lesson-nav a { min-width: 100%; }
+  .lesson-nav a { min-width: 100%; max-width: none; }
 }

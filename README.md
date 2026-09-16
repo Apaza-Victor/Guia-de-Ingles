@@ -57,6 +57,14 @@
 │   └── course.css                # Estilos de módulos y lecciones
 ├── js/
 │   └── main.js                   # Tema, navbar, reveal, filtros, quiz, validación
+├── partials/                     # Plantillas canónicas del "chrome" (head, navbar, footers, scripts)
+│   ├── head.html                 # <head> con {TITLE}, {DESC}, {ROOT}
+│   ├── nav.html                  # Navbar con {ACTIVE_*}, {MODULE_ITEM}, {CTA_*}
+│   ├── footer.html               # Footer completo (inicio, ruta, método, hub)
+│   ├── footer-module.html        # Footer de módulos/lecciones con {MOD}, {OTHER_MODULES}
+│   └── tail.html                 # Back-to-top + Bootstrap JS + main.js con {ROOT}
+├── scripts/
+│   └── rebuild-chrome.mjs        # Reconstruye head/nav/footer/tail en todas las páginas
 ├── modulos/
 │   ├── index.html                # Hub con filtros y carrusel
 │   ├── tiempos-verbales/         # Gramática: presente, pasado, present perfect, condicionales
@@ -66,6 +74,30 @@
 ├── .nojekyll                     # Compatibilidad con GitHub Pages
 └── .gitignore
 ```
+
+### 🧩 Sistema de plantillas (chrome canónico)
+
+El `head`, la `navbar`, el `footer` y los scripts son **idénticos en todas las páginas** y se mantienen desde los partials en `partials/`. Para regenerarlos:
+
+```bash
+node scripts/rebuild-chrome.mjs          # reconstruye las 19 páginas
+node scripts/rebuild-chrome.mjs --dry-run # simula sin escribir
+```
+
+El script autodetecta cada página (inicio, ruta, método, hub, hub de módulo o lección) para:
+
+- Calcular la **ruta relativa** correcta (`{ROOT}` = `./`, `../`, `../../`).
+- Marcar el **enlace activo** de la navbar (`{ACTIVE_*}`) y añadir el **item del módulo actual** (`{MODULE_ITEM}`).
+- Elegir el **CTA** (`{CTA_HREF}` / `{CTA_TEXT}`) y el **footer** según el tipo de página.
+- Inyectar en todas el botón *volver arriba* y los scripts (Bootstrap + `main.js`).
+
+**Flujo de trabajo al escalar:**
+
+1. Edita solo el partial (p. ej. `partials/nav.html`).
+2. Lanza `node scripts/rebuild-chrome.mjs`.
+3. Si añades una página nueva, crea el HTML con su `<main>` y vuelve a ejecutarlo.
+
+> Idempotente: ejecutarlo dos veces seguidas no modifica nada («sin cambios»).
 
 ## 🚀 Despliegue en GitHub Pages (en vivo)
 
