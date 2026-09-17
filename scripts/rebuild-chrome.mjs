@@ -32,10 +32,12 @@ const FOOTER_MODULE_TPL = readP("footer-module.html");
 const TAIL_TPL = readP("tail.html");
 
 const MODULES = [
-  { dir: "tiempos-verbales", label: "Tiempos verbales" },
-  { dir: "vocabulario-esencial", label: "Vocabulario esencial" },
-  { dir: "conversacion", label: "Conversación" },
-  { dir: "pronunciacion", label: "Pronunciación" },
+  { dir: "a1", label: "Nivel A1" },
+  { dir: "a2", label: "Nivel A2" },
+  { dir: "b1", label: "Nivel B1" },
+  { dir: "b2", label: "Nivel B2" },
+  { dir: "c1", label: "Nivel C1" },
+  { dir: "c2", label: "Nivel C2" },
 ];
 
 const htmlFiles = [];
@@ -76,14 +78,21 @@ for (const file of htmlFiles) {
   else if (rel === "modulos/index.html") type = "hub";
   else if (/^modulos\/[^/]+\/index\.html$/.test(rel)) { type = "module-hub"; mod = rel.split("/")[1]; }
   else if (/^modulos\/[^/]+\/[^/]+\.html$/.test(rel)) { type = "lesson"; mod = rel.split("/")[1]; }
+  else if (/^recursos\//.test(rel)) type = "resources";
+  else if (rel === "mi-progreso.html" || rel === "test-de-nivel.html") type = "progress";
   else type = "home"; // index.html y cualquier otra página raíz
 
   // ---- Navbar: sección activa ----
-  const act = { ACTIVE_INICIO: "", ACTIVE_RUTA: "", ACTIVE_METODO: "", ACTIVE_MODULOS: "" };
+  const act = {
+    ACTIVE_INICIO: "", ACTIVE_RUTA: "", ACTIVE_METODO: "",
+    ACTIVE_MODULOS: "", ACTIVE_RECURSOS: "", ACTIVE_PROGRESO: "",
+  };
   if (type === "home") act.ACTIVE_INICIO = " active";
   else if (rel === "ruta.html") act.ACTIVE_RUTA = " active";
   else if (rel === "metodo.html") act.ACTIVE_METODO = " active";
   else if (type === "hub") act.ACTIVE_MODULOS = " active";
+  else if (type === "resources") act.ACTIVE_RECURSOS = " active";
+  else if (type === "progress") act.ACTIVE_PROGRESO = " active";
 
   // ---- Navbar: item del módulo actual ----
   const moduleInfo = MODULES.find((m) => m.dir === mod);

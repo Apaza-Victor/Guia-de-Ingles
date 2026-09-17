@@ -3,9 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Todos los módulos de aprendizaje de inglés: gramática, vocabulario, conversación y pronunciación. De cero a experto.">
+  <meta name="description" content="Todos los niveles de inglés según el marco CEFR: A1, A2, B1, B2, C1 y C2. Filtra por nivel y área para aprender de cero a experto.">
   <meta name="theme-color" content="#0b1020">
-  <title>Módulos — FluentPath | De Cero a Experto en Inglés</title>
+  <title>Módulos · Niveles CEFR — FluentPath | De Cero a Experto en Inglés</title>
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:site_name" content="FluentPath — Guía de Inglés">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Módulos · Niveles CEFR — FluentPath | De Cero a Experto en Inglés">
+  <meta property="og:description" content="Todos los niveles de inglés según el marco CEFR: A1, A2, B1, B2, C1 y C2. Filtra por nivel y área para aprender de cero a experto.">
+  <meta property="og:image" content="https://apaza-victor.github.io/Guia-de-Ingles/og-image.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Módulos · Niveles CEFR — FluentPath | De Cero a Experto en Inglés">
+  <meta name="twitter:description" content="Todos los niveles de inglés según el marco CEFR: A1, A2, B1, B2, C1 y C2. Filtra por nivel y área para aprender de cero a experto.">
+  <meta name="twitter:image" content="https://apaza-victor.github.io/Guia-de-Ingles/og-image.svg">
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +33,6 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
 </head>
 <body>
-
 
 <!-- ===== NAVBAR ===== -->
   <header>
@@ -41,6 +51,8 @@
             <li class="nav-item"><a class="nav-link nav-link-anim" href="../ruta.html">Ruta de Aprendizaje</a></li>
             <li class="nav-item"><a class="nav-link nav-link-anim" href="../metodo.html">Método</a></li>
             <li class="nav-item"><a class="nav-link nav-link-anim active" href="../modulos/index.html">Módulos</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-anim" href="../recursos/index.html">Recursos</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-anim" href="../mi-progreso.html">Mi progreso</a></li>
             <li class="nav-item ms-lg-2">
               <button class="theme-toggle" type="button" aria-label="Cambiar modo de color"><i class="bi bi-sun-fill"></i></button>
             </li>
@@ -62,96 +74,116 @@
           <span class="sep">/</span>
           <span>Módulos</span>
         </nav>
-        <span class="badge-chip mb-3">Explora todo el contenido</span>
-        <h1 class="display-4 fw-bold text-white">Módulos de <span class="gradient-text">aprendizaje</span></h1>
-        <p class="lead text-white-50 mx-auto mt-3" style="max-width: 640px;">Elige un área y avanza por sus subsecciones y lecciones. Cada módulo te lleva un paso más cerca del nivel experto.</p>
+        <span class="badge-chip mb-3">Los 6 niveles del MCER</span>
+        <h1 class="display-4 fw-bold text-white">Niveles CEFR de <span class="gradient-text">aprendizaje</span></h1>
+        <p class="lead text-white-50 mx-auto mt-3" style="max-width: 640px;">Sigue los niveles oficiales del Marco Común Europeo: A1, A2, B1, B2, C1 y C2. Filtra por nivel o por área y empieza hoy.</p>
       </div>
     </section>
 
     <section id="modulos" class="course-body py-5">
       <div class="container py-4">
         <div class="text-center mb-4 reveal-up">
-          <h2 class="section-title mb-2">Elige tu <span class="gradient-text">módulo</span></h2>
-          <p class="section-sub mx-auto">Todos los módulos incluyen subsecciones, lecciones explicadas y mini quizzes. Filtra por área para encontrar lo que necesitas hoy.</p>
+          <h2 class="section-title mb-2">Elige tu <span class="gradient-text">nivel</span></h2>
+          <p class="section-sub mx-auto">Todos los niveles incluyen lecciones con ejemplos traducidos, vocabulario y sonido. Combina nivel y área con los dos filtros.</p>
+        </div>
+
+        <div class="text-center mb-3 reveal-up delay-1">
+          <span class="filter-label">Nivel</span>
+          <div class="filter-group" id="levelFilters">
+            <button class="filter-btn active" data-filter-level="all">Todos</button>
+            <button class="filter-btn" data-filter-level="a1">A1</button>
+            <button class="filter-btn" data-filter-level="a2">A2</button>
+            <button class="filter-btn" data-filter-level="b1">B1</button>
+            <button class="filter-btn" data-filter-level="b2">B2</button>
+            <button class="filter-btn" data-filter-level="c1">C1</button>
+            <button class="filter-btn" data-filter-level="c2">C2</button>
+          </div>
         </div>
 
         <div class="text-center mb-4 reveal-up delay-1">
-          <div class="filter-group" id="moduleFilters">
-            <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="gramatica">Gramática</button>
-            <button class="filter-btn" data-filter="vocabulario">Vocabulario</button>
-            <button class="filter-btn" data-filter="conversacion">Conversación</button>
-            <button class="filter-btn" data-filter="pronunciacion">Pronunciación</button>
+          <span class="filter-label">Área</span>
+          <div class="filter-group" id="catFilters">
+            <button class="filter-btn active" data-filter-cat="all">Todas</button>
+            <button class="filter-btn" data-filter-cat="gramatica">Gramática</button>
+            <button class="filter-btn" data-filter-cat="vocabulario">Vocabulario</button>
+            <button class="filter-btn" data-filter-cat="conversacion">Conversación</button>
+            <button class="filter-btn" data-filter-cat="pronunciacion">Pronunciación</button>
           </div>
         </div>
 
         <div class="row g-4" id="moduleGrid">
-          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up" data-cat="gramatica">
-            <a href="tiempos-verbales/index.html" class="module-card p-4 h-100 text-decoration-none">
+          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up lv-a1" data-level="a1" data-cat="gramatica vocabulario conversacion pronunciacion">
+            <a href="a1/index.html" class="module-card p-4 h-100 text-decoration-none">
               <div class="module-top d-flex justify-content-between align-items-center mb-3">
-                <span class="module-tag"><i class="bi bi-diagram-2 me-1"></i>Gramática</span>
-                <i class="bi bi-diagram-2 module-ico"></i>
+                <span class="module-tag"><i class="bi bi-emoji-smile me-1"></i>Principiante</span>
+                <i class="bi bi-emoji-smile module-ico"></i>
               </div>
-              <h5 class="fw-bold mb-2">Tiempos Verbales</h5>
-              <p class="small mb-0">Presente simple, pasado, present perfect y condicionales explicados con ejemplos traducidos.</p>
+              <h5 class="fw-bold mb-1">Nivel A1</h5>
+              <p class="small mb-0">Saludos, presente simple, artículos, comparativos, preposiciones, familia y fonética para empezar desde cero.</p>
+              <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">11 lecciones · 66 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up delay-1 lv-a2" data-level="a2" data-cat="gramatica vocabulario conversacion pronunciacion">
+            <a href="a2/index.html" class="module-card p-4 h-100 text-decoration-none">
+              <div class="module-top d-flex justify-content-between align-items-center mb-3">
+                <span class="module-tag"><i class="bi bi-egg-fried me-1"></i>Básico</span>
+                <i class="bi bi-egg-fried module-ico"></i>
+              </div>
+              <h5 class="fw-bold mb-1">Nivel A2</h5>
+              <p class="small mb-0">Pasado simple y continuo, modales, comida, viajes y sonidos difíciles para desenvolverte en el día a día.</p>
+              <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">8 lecciones · 48 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up delay-2 lv-b1" data-level="b1" data-cat="gramatica vocabulario conversacion">
+            <a href="b1/index.html" class="module-card p-4 h-100 text-decoration-none">
+              <div class="module-top d-flex justify-content-between align-items-center mb-3">
+                <span class="module-tag"><i class="bi bi-signpost-2 me-1"></i>Intermedio</span>
+                <i class="bi bi-signpost-2 module-ico"></i>
+              </div>
+              <h5 class="fw-bold mb-1">Nivel B1</h5>
+              <p class="small mb-0">Present perfect, verb patterns, relative clauses, used to, conectores y escritura práctica para conversar con soltura.</p>
+              <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">9 lecciones · 54 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up delay-3 lv-b2" data-level="b2" data-cat="gramatica vocabulario conversacion">
+            <a href="b2/index.html" class="module-card p-4 h-100 text-decoration-none">
+              <div class="module-top d-flex justify-content-between align-items-center mb-3">
+                <span class="module-tag"><i class="bi bi-speedometer2 me-1"></i>Intermedio alto</span>
+                <i class="bi bi-speedometer2 module-ico"></i>
+              </div>
+              <h5 class="fw-bold mb-1">Nivel B2</h5>
+              <p class="small mb-0">Condicionales, voz pasiva, past perfect, question tags, debates, lectura y entrevistas de trabajo para hablar con precisión.</p>
+              <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">10 lecciones · 60 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up delay-1 lv-c1" data-level="c1" data-cat="gramatica conversacion vocabulario">
+            <a href="c1/index.html" class="module-card p-4 h-100 text-decoration-none">
+              <div class="module-top d-flex justify-content-between align-items-center mb-3">
+                <span class="module-tag"><i class="bi bi-rocket-takeoff me-1"></i>Avanzado</span>
+                <i class="bi bi-rocket-takeoff module-ico"></i>
+              </div>
+              <h5 class="fw-bold mb-1">Nivel C1</h5>
+              <p class="small mb-0">Slang, idioms, mixed conditionals e inversión para sonar auténtico y sutil en conversaciones reales.</p>
               <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">4 lecciones · 24 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
             </a>
           </div>
-          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up delay-1" data-cat="vocabulario">
-            <a href="vocabulario-esencial/index.html" class="module-card p-4 h-100 text-decoration-none">
+          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up delay-2 lv-c2" data-level="c2" data-cat="gramatica conversacion vocabulario">
+            <a href="c2/index.html" class="module-card p-4 h-100 text-decoration-none">
               <div class="module-top d-flex justify-content-between align-items-center mb-3">
-                <span class="module-tag"><i class="bi bi-book me-1"></i>Vocabulario</span>
-                <i class="bi bi-book module-ico"></i>
+                <span class="module-tag"><i class="bi bi-trophy me-1"></i>Experto</span>
+                <i class="bi bi-trophy module-ico"></i>
               </div>
-              <h5 class="fw-bold mb-2">Vocabulario Esencial</h5>
-              <p class="small mb-0">Las 1000 palabras más usadas y los phrasal verbs imprescindibles, organizados por situaciones reales.</p>
-              <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">2 lecciones · 24 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up delay-2" data-cat="conversacion">
-            <a href="conversacion/index.html" class="module-card p-4 h-100 text-decoration-none">
-              <div class="module-top d-flex justify-content-between align-items-center mb-3">
-                <span class="module-tag active-tag"><i class="bi bi-chat-dots me-1"></i>Conversación</span>
-                <i class="bi bi-chat-dots module-ico"></i>
-              </div>
-              <h5 class="fw-bold mb-2">Conversación</h5>
-              <p class="small mb-0">Presentaciones, entrevistas de trabajo y expresiones de la vida real para hablar con naturalidad.</p>
-              <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">3 lecciones · 18 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up" data-cat="pronunciacion">
-            <a href="pronunciacion/index.html" class="module-card p-4 h-100 text-decoration-none">
-              <div class="module-top d-flex justify-content-between align-items-center mb-3">
-                <span class="module-tag"><i class="bi bi-mic me-1"></i>Pronunciación</span>
-                <i class="bi bi-mic module-ico"></i>
-              </div>
-              <h5 class="fw-bold mb-2">Pronunciación</h5>
-              <p class="small mb-0">Símbolos fonéticos y los sonidos más difíciles para los hispanohablantes, con guías prácticas.</p>
+              <h5 class="fw-bold mb-1">Nivel C2</h5>
+              <p class="small mb-0">Matices avanzados y oraciones enfáticas para llegar a la cima del idioma inglés con registro sofisticado.</p>
               <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">2 lecciones · 12 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
             </a>
           </div>
-          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up delay-1" data-cat="vocabulario">
-            <a href="vocabulario-esencial/phrasal-verbs.html" class="module-card p-4 h-100 text-decoration-none">
-              <div class="module-top d-flex justify-content-between align-items-center mb-3">
-                <span class="module-tag"><i class="bi bi-puzzle me-1"></i>Vocabulario</span>
-                <i class="bi bi-puzzle module-ico"></i>
-              </div>
-              <h5 class="fw-bold mb-2">Phrasal Verbs</h5>
-              <p class="small mb-0">Los phrasal verbs que usan los nativos todos los días, con significados claros y ejemplos en contexto.</p>
-              <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">6 lecciones · 36 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
-            </a>
-          </div>
-          <div class="col-12 col-md-6 col-xl-4 module-item reveal-up delay-2" data-cat="conversacion">
-            <a href="conversacion/slang.html" class="module-card p-4 h-100 text-decoration-none">
-              <div class="module-top d-flex justify-content-between align-items-center mb-3">
-                <span class="module-tag active-tag"><i class="bi bi-fire me-1"></i>Conversación</span>
-                <i class="bi bi-fire module-ico"></i>
-              </div>
-              <h5 class="fw-bold mb-2">Slang y Expresiones</h5>
-              <p class="small mb-0">El inglés informal que escuchas en series, películas y redes, para sonar auténtico y actual.</p>
-              <p class="module-footer text-start mt-3 small fw-semibold text-muted-theme mb-0">4 lecciones · 20 ejercicios <i class="bi bi-arrow-right ms-1"></i></p>
-            </a>
-          </div>
+        </div>
+
+        <div class="text-center mt-4 d-md-none">
+          <a href="../ruta.html" class="btn btn-grad rounded-pill px-4 py-2">
+            <i class="bi bi-map me-1"></i>Ver la ruta de aprendizaje
+          </a>
         </div>
 
         <div class="demo-carousel mt-5 mx-auto reveal-scale">
@@ -185,7 +217,6 @@
     </section>
   </main>
 
-
 <!-- ===== FOOTER ===== -->
   <footer class="footer pt-5 pb-4">
     <div class="container">
@@ -203,16 +234,20 @@
             <li><a href="../ruta.html">Ruta de niveles</a></li>
             <li><a href="../modulos/index.html">Módulos</a></li>
             <li><a href="../metodo.html">Método</a></li>
-            <li><a href="../modulos/pronunciacion/index.html">Pronunciación</a></li>
+            <li><a href="../recursos/index.html">Recursos de consulta</a></li>
+            <li><a href="../mi-progreso.html">Mi progreso</a></li>
+            <li><a href="../test-de-nivel.html">Test de nivel</a></li>
           </ul>
         </div>
         <div class="col-6 col-lg-2">
-          <h6 class="text-white fw-bold mb-3">Áreas</h6>
+          <h6 class="text-white fw-bold mb-3">Niveles CEFR</h6>
           <ul class="list-unstyled footer-links">
-            <li><a href="../modulos/tiempos-verbales/index.html">Gramática</a></li>
-            <li><a href="../modulos/vocabulario-esencial/index.html">Vocabulario</a></li>
-            <li><a href="../modulos/conversacion/index.html">Conversación</a></li>
-            <li><a href="../modulos/pronunciacion/index.html">Pronunciación</a></li>
+            <li><a href="../modulos/a1/index.html">A1 · Principiante</a></li>
+            <li><a href="../modulos/a2/index.html">A2 · Básico</a></li>
+            <li><a href="../modulos/b1/index.html">B1 · Intermedio</a></li>
+            <li><a href="../modulos/b2/index.html">B2 · Intermedio alto</a></li>
+            <li><a href="../modulos/c1/index.html">C1 · Avanzado</a></li>
+            <li><a href="../modulos/c2/index.html">C2 · Experto</a></li>
           </ul>
         </div>
         <div class="col-12 col-lg-4">
@@ -227,14 +262,14 @@
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 pt-2">
         <div class="text-white-50 small">© 2026 FluentPath. Todos los derechos reservados.</div>
         <div class="d-flex gap-3 small">
-          <span class="text-white-50">Privacidad</span>
-          <span class="text-white-50">Términos</span>
-          <span class="text-white-50">Cookies</span>
+          <a href="../terminos.html" class="text-white-50 text-decoration-none">Privacidad</a>
+          <a href="../terminos.html" class="text-white-50 text-decoration-none">Términos</a>
+          <a href="../terminos.html" class="text-white-50 text-decoration-none">Cookies</a>
+          <a href="../contacto.html" class="text-white-50 text-decoration-none">Contacto</a>
         </div>
       </div>
     </div>
   </footer>
-
 
 <!-- Back to top -->
   <button class="back-to-top btn rounded-circle d-none align-items-center justify-content-center" id="backToTop" aria-label="Volver arriba">

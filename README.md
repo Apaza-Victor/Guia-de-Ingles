@@ -32,19 +32,27 @@
 
 - 🖥️ Hero a pantalla completa con malla de fondo, mock de progreso animado y chips flotantes.
 - 🌙 / ☀️ **Modo oscuro y claro** con toggler incluido en todas las páginas (recuerda tu preferencia).
-- 🧭 Secciones del header como **páginas independientes**: Inicio, Ruta de Aprendizaje, Método y Módulos.
-- 🔎 **Módulos con filtrado dinámico** (Gramática, Vocabulario, Conversación, Pronunciación) y carrusel de demostración.
-- 📚 Cada lección incluye teoría, ejemplos traducidos (EN/ES), tablas, tips, errores comunes y **mini quiz interactivo**.
+- 🧭 Secciones del header como **páginas independientes**: Inicio, Ruta de Aprendizaje, Método, Módulos, Recursos y Mi progreso.
+- 🎓 **6 niveles CEFR (A1–C2)** con hubs por nivel y filtrado dual por nivel + área (Gramática, Vocabulario, Conversación, Pronunciación).
+- 🔊 **Audio automático** (SpeechSynthesis): botón de escuchar en cada ejemplo en inglés y en cada palabra de las secciones de vocabulario.
+- 📚 **44 lecciones** con teoría, ejemplos traducidos (EN/ES), tablas, tips, errores comunes, **vocabulario EN→ES con audio** y **mini quiz interactivo** (6 ejercicios por lección).
+- 📊 **Test de nivel** (24 preguntas según el MCER) con recomendación inmediata de nivel.
+- ✅ **Progreso personal** guardado en `localStorage`: marca lecciones como completadas, racha de estudio y progreso por nivel.
+- 📖 **Sección Recursos**: verbos irregulares, phrasal verbs, idioms y alfabeto fonético (IPA) con audio.
 - 📱 100% responsive y accesible.
 
 ## 🗺️ Ruta de aprendizaje
 
-| Nivel | Etapa | Contenido clave |
-| :---: | :--- | :--- |
-| 1 | 🥚 Principiante | Sonidos, vocabulario esencial y primeras frases |
-| 2 | ➡️ Intermedio | Tiempos verbales, phrasal verbs y conversación cotidiana |
-| 3 | 🚀 Avanzado | Entrevistas, condicionales y expresiones idiomáticas |
-| 4 | 🏆 Experto | Fonética fina y fluidez nivel C1/C2 |
+Mare: la ruta sigue el **Marco Común Europeo**: A1 → A2 → B1 → B2 → C1 → C2.
+
+| Nivel | Etapa | Contenido clave | Lecciones |
+| :---: | :--- | :--- | :---: |
+| A1 | 🥚 Principiante | Saludos, presentaciones, presente simple, preguntas, números y fonética | 11 |
+| A2 | 🍳 Básico | Pasado simple, futuro (will/going to), compras y sonidos difíciles | 8 |
+| B1 | ➡️ Intermedio | Present perfect, presente continuo, phrasal verbs y recomendaciones | 9 |
+| B2 | 🚀 Intermedio alto | Condicionales, voz pasiva, estilo indirecto, falsos cognados y entrevistas | 10 |
+| C1 | 🏆 Avanzado | Slang nativo y expresiones idiomáticas | 4 |
+| C2 | 🥇 Experto | Matices avanzados y fluidez total | 2 |
 
 ## 📁 Estructura del proyecto
 
@@ -52,27 +60,47 @@
 ├── index.html                    # Inicio (hero + CTA + footer)
 ├── ruta.html                     # Ruta de aprendizaje independiente
 ├── metodo.html                   # Método independiente
+├── test-de-nivel.html            # Test de nivel MCER (24 preguntas)
+├── mi-progreso.html              # Panel de progreso (localStorage)
+├── contacto.html                 # Contacto
+├── terminos.html                 # Términos, privacidad y cookies
+├── 404.html                      # Página no encontrada
+├── robots.txt                    # SEO / indexación
+├── sitemap.xml                   # Sitemap de todas las páginas
+├── og-image.svg                  # Imagen para compartir en redes (Open Graph)
 ├── css/
 │   ├── style.css                 # Tema con variables (dark/light), gradientes, glassmorphism
 │   └── course.css                # Estilos de módulos y lecciones
 ├── js/
-│   └── main.js                   # Tema, navbar, reveal, filtros, quiz, validación
+│   └── main.js                   # Tema, navbar, reveal, filtros, quiz, audio, progreso, test
 ├── partials/                     # Plantillas canónicas del "chrome" (head, navbar, footers, scripts)
-│   ├── head.html                 # <head> con {TITLE}, {DESC}, {ROOT}
+│   ├── head.html                 # <head> con {TITLE}, {DESC}, {ROOT} y metadatos Open Graph
 │   ├── nav.html                  # Navbar con {ACTIVE_*}, {MODULE_ITEM}, {CTA_*}
-│   ├── footer.html               # Footer completo (inicio, ruta, método, hub)
+│   ├── footer.html               # Footer completo (inicio, ruta, método, hub, recursos, progreso)
 │   ├── footer-module.html        # Footer de módulos/lecciones con {MOD}, {OTHER_MODULES}
 │   └── tail.html                 # Back-to-top + Bootstrap JS + main.js con {ROOT}
 ├── scripts/
 │   └── rebuild-chrome.mjs        # Reconstruye head/nav/footer/tail en todas las páginas
 ├── modulos/
-│   ├── index.html                # Hub con filtros y carrusel
-│   ├── tiempos-verbales/         # Gramática: presente, pasado, present perfect, condicionales
-│   ├── vocabulario-esencial/     # 1,000 palabras + phrasal verbs
-│   ├── conversacion/             # Presentaciones, entrevistas, slang
-│   └── pronunciacion/            # Fonética y sonidos difíciles
+│   ├── index.html                # Hub con filtrado dual (nivel + área) y carrusel
+│   ├── a1…c2/                    # Niveles CEFR: cada carpeta con su index (hub de nivel)
+│   │   ├── index.html            # Hub del nivel con el listado de lecciones
+│   │   └── *.html                # Lecciones (44 en total) con teoría, audio y vocab
+├── recursos/
+│   ├── index.html                # Hub de recursos de consulta
+│   ├── verbos-irregulares.html   # Verbos irregulares con audio
+│   ├── phrasal-verbs.html        # Phrasal verbs con audio
+│   ├── idioms.html               # Idioms y modismos con audio
+│   └── alfabeto-fonetico.html    # Alfabeto fonético IPA con audio
 ├── .nojekyll                     # Compatibilidad con GitHub Pages
 └── .gitignore
+```
+
+> Tras cambiar el listado de niveles o crear lecciones nuevas, regenera el chrome:
+
+```bash
+node scripts/rebuild-chrome.mjs          # reconstruye las 64 páginas
+node scripts/rebuild-chrome.mjs --dry-run # simula sin escribir
 ```
 
 ### 🧩 Sistema de plantillas (chrome canónico)
@@ -80,7 +108,7 @@
 El `head`, la `navbar`, el `footer` y los scripts son **idénticos en todas las páginas** y se mantienen desde los partials en `partials/`. Para regenerarlos:
 
 ```bash
-node scripts/rebuild-chrome.mjs          # reconstruye las 19 páginas
+node scripts/rebuild-chrome.mjs          # reconstruye las 64 páginas
 node scripts/rebuild-chrome.mjs --dry-run # simula sin escribir
 ```
 

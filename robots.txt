@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /modulos/*/ 
+
+Sitemap: https://apaza-victor.github.io/Guia-de-Ingles/sitemap.xml
